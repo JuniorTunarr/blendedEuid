@@ -34,7 +34,7 @@ function HeaderBar() {
             />
           </svg>
           <img
-            src="/src/assets/unloginUser.svg"
+            src="/assets/unloginUser.svg"
             className="ml-2 w-[30px] h-[30px] border rounded-full object-cover"
             alt="사용자 프로필"
           ></img>

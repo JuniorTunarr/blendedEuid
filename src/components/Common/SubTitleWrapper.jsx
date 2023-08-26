@@ -15,7 +15,7 @@ function SubTitleWrapper({ id, title, contents }) {
           <figure className="openingDay tracking-[-0.02em] select-none box-border relative m-0 w-[23.75rem] h-[22.8125rem]">
             <a className="tracking-[-0.02em] select-none bg-transparent box-border overflow-hidden block h-[22.8125rem] transition-all duration-[0.4s] ease-[cubic-bezier(.175,0.885,0.32,1.275)] no-underline text-[#5382f6] rounded-[10px]">
               <img
-                src="/src/assets/openingDay.jpg"
+                src="/assets/openingDay.jpg"
                 alt="오프닝 데이"
                 className="tracking-[-0.02em] select-none text-[#5382f6] aspect-[auto_335_/_274] box-border w-full h-auto relative z-[-1] rounded-[10px] border-none"
               />
@@ -29,7 +29,7 @@ function SubTitleWrapper({ id, title, contents }) {
                 <b className>0926</b>
               </figcaption>
               <img
-                src="/src/assets/topLeftArrow.svg"
+                src="/assets/topLeftArrow.svg"
                 alt="바로가기 화살표"
                 className="tracking-[-0.02em] select-none w-[16] h-[16] box-border opacity-100 absolute right-5 bottom-[22px]"
               />

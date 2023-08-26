@@ -5,7 +5,7 @@
 header {
   backdrop-filter: blur(1.4px);
   -webkit-backdrop-filter: blur(1.4px);
-  background-image: url("/src/assets/headerWave.svg");
+  background-image: url("/assets/headerWave.svg");
 }
 .globalNavigationBar {
   top: 65px;
@@ -62,7 +62,7 @@ header {
   }
 }
 footer {
-  background-image: url("/src/assets/footerWave.svg");
+  background-image: url("/assets/footerWave.svg");
 }
 .footerWrapper {
   -webkit-text-size-adjust: 100%;
@@ -91,7 +91,7 @@ footer {
   height: 30px;
   background-repeat: no-repeat;
   margin-top: 0.625rem;
-  background-image: url("/src/assets/footerLogo.svg");
+  background-image: url("/assets/footerLogo.svg");
 }
 
 .grid-layout {

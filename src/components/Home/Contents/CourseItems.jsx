@@ -56,7 +56,7 @@ function CourseItems() {
                 <h3 className="carousel__title">{course.title}</h3>
                 <img
                   className="carousel__item--image"
-                  src={`/src/assets/carousel${course.index}.svg`}
+                  src={`/assets/carousel${course.index}.svg`}
                   alt={course.title}
                 />
                 <p className="carousel__item--tags">
@@ -67,7 +67,7 @@ function CourseItems() {
                   ))}
                 </p>
                 <img
-                  src="/src/assets/carouselArrow.svg"
+                  src="/assets/carouselArrow.svg"
                   alt="바로가기 화살표"
                   className="tracking-[-0.02em] select-none w-[16] h-[16] box-border opacity-100 absolute right-5 bottom-[22px]"
                 />

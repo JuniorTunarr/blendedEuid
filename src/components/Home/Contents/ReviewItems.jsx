@@ -9,7 +9,7 @@ function ReviewItems({ currentIndex, reviews }) {
                 {Array.from({ length: review.star }, (_, index) => (
                   <img
                     key={index}
-                    src="src/assets/starFill.svg"
+                    src="/assets/starFill.svg"
                     alt="채워진별"
                     width={29}
                     height={27}
@@ -18,7 +18,7 @@ function ReviewItems({ currentIndex, reviews }) {
                 {Array.from({ length: 5 - review.star }, (_, index) => (
                   <img
                     key={index}
-                    src="src/assets/starNonFill.svg"
+                    src="/assets/starNonFill.svg"
                     alt="안채워진별"
                     width={29}
                     height={27}

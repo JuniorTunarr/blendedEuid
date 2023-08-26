@@ -53,7 +53,7 @@ function ShowItems() {
             style={{
               background: `
                 linear-gradient(rgba(255, 255, 255, 0) 20%, rgba(38, 43, 66, 0.55) 55%),
-                url(src/assets/showcase${caseItem.index}.jpg) center center / cover no-repeat`,
+                url(/assets/showcase${caseItem.index}.jpg) center center / cover no-repeat`,
             }}
           >
             <div className="carousel__item--wrapper">
@@ -63,7 +63,7 @@ function ShowItems() {
                   {caseItem.description}
                 </p>
                 <img
-                  src="/src/assets/carouselArrow1.svg"
+                  src="/assets/carouselArrow1.svg"
                   alt="바로가기 화살표"
                   className="tracking-[-0.02em] select-none w-[16] h-[16] box-border opacity-100 absolute right-5 bottom-[22px]"
                 />

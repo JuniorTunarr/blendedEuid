@@ -2,12 +2,12 @@ import { useState } from "react";
 import { useNavigate, Link } from "react-router-dom";
 import pb from "@/api/pocketbase";
 import debounce from "@/utils/debounce";
-import ClosedEyeIcon from "@/assets/closed_eye.svg";
-import OpenedEyeIcon from "@/assets/opened_eye.svg";
-import UserIcon from "@/assets/person.svg";
-import MailIcon from "@/assets/mail.svg";
-import CheckIcon from "@/assets/green_check_icon.svg";
-import WrongIcon from "@/assets/red_x_icon.svg";
+import ClosedEyeIcon from "/assets/closed_eye.svg";
+import OpenedEyeIcon from "/assets/opened_eye.svg";
+import MailIcon from "/assets/mail.svg";
+import UserIcon from "/assets/person.svg";
+import CheckIcon from "/assets/green_check_icon.svg";
+import WrongIcon from "/assets/red_x_icon.svg";
 
 function SignUp() {
   const navigate = useNavigate();
@@ -99,9 +99,6 @@ function SignUp() {
         [name]: value,
       });
     }
-  };
-  const handleCancel = () => {
-    history.back();
   };
 
   const handleDebounceInput = debounce(handleInput, 500);

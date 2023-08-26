@@ -75,7 +75,7 @@ function Review() {
             onClick={handlePreviousClick}
             style={{
               background:
-                "url(/src/assets/carouselControl.svg) center/cover no-repeat",
+                "url(/assets/carouselControl.svg) center/cover no-repeat",
             }}
           />
         )}
@@ -87,7 +87,7 @@ function Review() {
             onClick={handleNextClick}
             style={{
               background:
-                "url(/src/assets/carouselControl.svg) center/cover no-repeat",
+                "url(/assets/carouselControl.svg) center/cover no-repeat",
             }}
           />
         )}
