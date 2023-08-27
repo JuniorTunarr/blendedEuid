@@ -15,7 +15,7 @@ import Guide from "./pages/Guide";
 import Faq from "./pages/Faq";
 import Course from "./pages/Course";
 import About from "./pages/About";
-import Profile from "./pages/profile";
+import Profile from "./pages/Profile";
 
 const router = createBrowserRouter(
   createRoutesFromElements(

@@ -86,7 +86,7 @@ function Profile() {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-gray-50">
-      <div className="flex flex-col items-center p-8 bg-white rounded shadow-lg rounded">
+      <div className="flex flex-col items-center p-8 bg-white rounded shadow-lg">
         {isEditMode ? (
           <>
             <div className="flex justify-between gap-5 min-w-[18.75rem]">
