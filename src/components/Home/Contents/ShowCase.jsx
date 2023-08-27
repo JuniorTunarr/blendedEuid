@@ -1,5 +1,5 @@
 import SubTitleWrapper from "@/components/Common/SubTitleWrapper";
-import ShowItems from "./showItems";
+import ShowItems from "./ShowItems";
 
 function ShowCase() {
   return (
