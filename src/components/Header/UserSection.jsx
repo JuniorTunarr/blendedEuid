@@ -3,6 +3,7 @@ import UnLoginUser from "/assets/unloginUser.svg";
 import DefaultUser from "/assets/defaultUser.svg";
 import { useAuth } from "@/contexts/Auth";
 import { useNavigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function UserSection() {
   const [isListVisible, setIsListVisible] = useState(false);
@@ -52,7 +53,7 @@ function UserSection() {
         {isAuth ? (
           <>
             <li className="p-1">
-              <a href="/blendedEuid/profile">나의 프로필</a>
+              <Link to="/blendedEuid/profile">나의 프로필</Link>
             </li>
             <div className="w-full h-px bg-[rgb(221,221,221)] mx-0 my-2"></div>
             <li className="p-1">
@@ -61,16 +62,12 @@ function UserSection() {
           </>
         ) : (
           <>
-            <li className="p-1">
-              <a href="/blendedEuid/signin" className="block">
-                로그인
-              </a>
+            <li className="p-1 block">
+              <Link to="/signin">로그인</Link>
             </li>
             <div className="w-full h-px bg-[rgb(221,221,221)] mx-0 my-2"></div>
-            <li className="p-1 ">
-              <a href="/blendedEuid/signup" className="block relative z-50">
-                회원가입
-              </a>
+            <li className="block relative z-50">
+              <Link to="/signup">회원가입</Link>
             </li>
           </>
         )}

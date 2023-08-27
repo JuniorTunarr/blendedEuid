@@ -1,49 +1,34 @@
+import { Link } from "react-router-dom";
+
 const GlobalNavigationBar = () => {
   return (
     <nav className="globalNavigationBar fixed">
       <ul className="flex">
-        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600">
-          <a className="active:text-{#373e6a}" href="/blendedEuid/about">
-            소개
-          </a>
+        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600 active:text-{#373e6a}">
+          <Link to="/about">소개</Link>
+        </li>
+        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600 active:text-{#373e6a}">
+          <Link to="/course">과정 &gt;</Link>
         </li>
         <li className="focus:rounded focus:shadow-md focus:shadow-blue-600">
-          <a className="active:text-{#373e6a}" href="/blendedEuid/course">
-            과정 &gt;
-          </a>
-        </li>
-        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600">
-          <a className="active:text-{#373e6a}" href="/blendedEuid/schedule">
+          <Link to="/schedule" className="active:text-{#373e6a}">
             연간 일정
-          </a>
+          </Link>
         </li>
-        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600">
-          <a className="active:text-{#373e6a}" href="/blendedEuid/guide">
-            학습 안내
-          </a>
+        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600 active:text-{#373e6a}">
+          <Link to="/guide">학습 안내</Link>
         </li>
-        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600">
-          <a className="active:text-{#373e6a}" href="/blendedEuid/faq">
-            FAQ
-          </a>
+        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600 active:text-{#373e6a}">
+          <Link to="/faq">FAQ</Link>
         </li>
-        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600">
-          <a className="active:text-{#373e6a}" href="/blendedEuid/story">
-            브랜드 이야기
-          </a>
+        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600 active:text-{#373e6a}">
+          <Link to="/story">브랜드 이야기</Link>
         </li>
-        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600">
-          <a
-            className="active:text-{#373e6a}"
-            href="/blendedEuid/privacypolicy"
-          >
-            정책 /환불 규정
-          </a>
+        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600 active:text-{#373e6a}">
+          <Link to="/privacypolicy">정책 /환불 규정</Link>
         </li>
-        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600">
-          <a className="active:text-{#373e6a}" href="/blendedEuid/shop">
-            샵
-          </a>
+        <li className="focus:rounded focus:shadow-md focus:shadow-blue-600 active:text-{#373e6a}">
+          <Link to="/shop">샵</Link>
         </li>
       </ul>
     </nav>
