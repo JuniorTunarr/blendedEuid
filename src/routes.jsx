@@ -34,7 +34,7 @@ const router = createBrowserRouter(
       <Route path="/story" element={<Story />} />
     </Route>
   ),
-  { basename: "/blendedEuid" }
+  { basename: "/blendedEuid/" }
 );
 
 export default router;
