@@ -20,7 +20,7 @@ function UserSection() {
 
   const handleSignOut = async () => {
     await signOut();
-    navigate("/blendedEuid");
+    navigate("/");
   };
 
   return (
@@ -53,7 +53,7 @@ function UserSection() {
         {isAuth ? (
           <>
             <li className="p-1">
-              <Link to="/blendedEuid/profile">나의 프로필</Link>
+              <Link to="/profile">나의 프로필</Link>
             </li>
             <div className="w-full h-px bg-[rgb(221,221,221)] mx-0 my-2"></div>
             <li className="p-1">
