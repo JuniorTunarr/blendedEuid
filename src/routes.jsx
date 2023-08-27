@@ -21,17 +21,17 @@ const router = createBrowserRouter(
   createRoutesFromElements(
     <Route path="/" element={<RootLayout />}>
       <Route index element={<Home />} />
-      <Route path="signin" element={<SignIn />} />
-      <Route path="signup" element={<SignUp />} />
-      <Route path="profile" element={<Profile />} />
-      <Route path="about" element={<About />} />
-      <Route path="course" element={<Course />} />
-      <Route path="faq" element={<Faq />} />
-      <Route path="guide" element={<Guide />} />
-      <Route path="privacypolicy" element={<PrivacyPolicy />} />
-      <Route path="schedule" element={<Schedule />} />
-      <Route path="shop" element={<Shop />} />
-      <Route path="story" element={<Story />} />
+      <Route path="/signin" element={<SignIn />} />
+      <Route path="/signup" element={<SignUp />} />
+      <Route path="/profile" element={<Profile />} />
+      <Route path="/about" element={<About />} />
+      <Route path="/course" element={<Course />} />
+      <Route path="/faq" element={<Faq />} />
+      <Route path="/guide" element={<Guide />} />
+      <Route path="/privacypolicy" element={<PrivacyPolicy />} />
+      <Route path="/schedule" element={<Schedule />} />
+      <Route path="/shop" element={<Shop />} />
+      <Route path="/story" element={<Story />} />
     </Route>
   ),
   { basename: "/blendedEuid" }
