@@ -7,7 +7,7 @@ const idDev = env.NODE_ENV === "development";
 
 // https://vitejs.dev/config/
 export default defineConfig({
-  base: process.env.NODE_ENV === "production" ? "/blendedEuid/" : "/",
+  base: "/blendedEuid/",
   plugins: [react()],
   css: {
     devSourcemap: true,

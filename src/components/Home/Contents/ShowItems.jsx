@@ -1,12 +1,15 @@
-import { useEffect } from "react";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Spinner from "@/components/Common/Spinner";
-
+import CarouselArrow1 from "/assets/carouselArrow1.svg";
+import Showcase1 from "/assets/showcase1.jpg";
+import Showcase2 from "/assets/showcase2.jpg";
+import Showcase3 from "/assets/showcase3.jpg";
+import Showcase4 from "/assets/showcase4.jpg";
 function ShowItems() {
   const [showCases, setShowCases] = useState(null);
   const [status, setStatus] = useState("pending");
   const [error, setError] = useState(null);
-
+  const showCaseImages = [Showcase1, Showcase2, Showcase3, Showcase4];
   useEffect(() => {
     const controller = new AbortController();
     const { signal } = controller;
@@ -53,7 +56,9 @@ function ShowItems() {
             style={{
               background: `
                 linear-gradient(rgba(255, 255, 255, 0) 20%, rgba(38, 43, 66, 0.55) 55%),
-                url(/assets/showcase${caseItem.index}.jpg) center center / cover no-repeat`,
+                url(${
+                  showCaseImages[caseItem.index % showCaseImages.length]
+                }) center center / cover no-repeat`,
             }}
           >
             <div className="carousel__item--wrapper">
@@ -63,7 +68,7 @@ function ShowItems() {
                   {caseItem.description}
                 </p>
                 <img
-                  src="/assets/carouselArrow1.svg"
+                  src={CarouselArrow1}
                   alt="바로가기 화살표"
                   className="tracking-[-0.02em] select-none w-[16] h-[16] box-border opacity-100 absolute right-5 bottom-[22px]"
                 />

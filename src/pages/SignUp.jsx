@@ -12,11 +12,11 @@ import WrongIcon from "/assets/red_x_icon.svg";
 function SignUp() {
   const navigate = useNavigate();
 
-  const nameRegex = /^.{2,10}$/; // 2~10글자
-  const usernameRegex = /^.{2,15}$/; // 2~15글자
+  const nameRegex = /^.{3,15}$/; // 영문 3~15글자
+  const usernameRegex = /^.{3,15}$/; // 영문 3~15글자
   const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // 일반적인 이메일 형식
   const passwordRegex = /^(?=.*[A-Za-z])(?=.*\d)[A-Za-z\d]{8,16}$/; // 8~16글자 영문+숫자
-
+  console.log(pb);
   const [formState, setFormState] = useState({
     name: "",
     username: "",

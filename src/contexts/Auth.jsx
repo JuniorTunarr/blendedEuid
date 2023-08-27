@@ -1,14 +1,3 @@
-// 컨텍스트
-// 1. 컨텍스트 생성 (React.createContext)
-// 2. 컨텍스트 프로바이더를 앱을 감쌈
-// 3. 컨텍스트 프로바이더를 사용해 값(value) 공급(provide)
-
-// 컴포넌트
-// 1. useContext 훅을 사용해서 공급된 컨텍스트 값을 주입(injection)
-// 2. JSX 또는 이벤트 핸들러 내부에서 값을 사용
-
-/* -------------------------------------------------------------------------- */
-
 import { createContext, useEffect, useState, useContext } from "react";
 import { string, node } from "prop-types";
 import pb from "@/api/pocketbase";
@@ -42,7 +31,7 @@ function AuthProvider({ displayName = "AuthProvider", children }) {
 
   // 인증 상태
   const [authState, setAuthState] = useState(initialAuthState);
-
+  console.log(authState);
   useEffect(() => {
     // 업데이트 될 때만 상태 변경
     const unsub = pb.authStore.onChange((token, model) => {
@@ -80,12 +69,25 @@ function AuthProvider({ displayName = "AuthProvider", children }) {
     return await pb.collection("users").delete(recordId);
   };
 
+  const updateUser = async (recordId, updatedData) => {
+    const updatedUser = await pb
+      .collection("users")
+      .update(recordId, updatedData);
+
+    setAuthState((state) => ({
+      ...state,
+      user: { ...state.user, ...updatedUser },
+    }));
+
+    return updatedUser;
+  };
   const authValue = {
     ...authState,
     signUp,
     signIn,
     signOut,
     cancelMembership,
+    updateUser,
   };
 
   return (

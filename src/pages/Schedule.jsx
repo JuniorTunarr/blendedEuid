@@ -1,5 +1,5 @@
 function Schedule() {
-  return <div>Schedule</div>;
+  return <div className=" flex items-center justify-center">Schedule</div>;
 }
 
 export default Schedule;

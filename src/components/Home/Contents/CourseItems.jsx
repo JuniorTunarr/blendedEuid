@@ -1,11 +1,15 @@
 import { useEffect, useState } from "react";
 import Spinner from "@/components/Common/Spinner";
-
+import CarouselArrow from "/assets/carouselArrow.svg";
+import Carousel1 from "/assets/carousel1.svg";
+import Carousel2 from "/assets/carousel2.svg";
+import Carousel3 from "/assets/carousel3.svg";
+import Carousel4 from "/assets/carousel4.svg";
 function CourseItems() {
   const [courses, setCourses] = useState(null);
   const [status, setStatus] = useState("pending");
   const [error, setError] = useState(null);
-
+  const carouselImages = [Carousel1, Carousel2, Carousel3, Carousel4];
   useEffect(() => {
     const controller = new AbortController();
     const { signal } = controller;
@@ -56,7 +60,7 @@ function CourseItems() {
                 <h3 className="carousel__title">{course.title}</h3>
                 <img
                   className="carousel__item--image"
-                  src={`/assets/carousel${course.index}.svg`}
+                  src={carouselImages[course.index % carouselImages.length]}
                   alt={course.title}
                 />
                 <p className="carousel__item--tags">
@@ -67,7 +71,7 @@ function CourseItems() {
                   ))}
                 </p>
                 <img
-                  src="/assets/carouselArrow.svg"
+                  src={CarouselArrow}
                   alt="바로가기 화살표"
                   className="tracking-[-0.02em] select-none w-[16] h-[16] box-border opacity-100 absolute right-5 bottom-[22px]"
                 />

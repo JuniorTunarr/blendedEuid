@@ -1,3 +1,5 @@
+import StarFill from "/assets/starFill.svg";
+import StarNonFill from "/assets/starNonFill.svg";
 function ReviewItems({ currentIndex, reviews }) {
   return (
     <ul className="carousel__slider">
@@ -9,7 +11,7 @@ function ReviewItems({ currentIndex, reviews }) {
                 {Array.from({ length: review.star }, (_, index) => (
                   <img
                     key={index}
-                    src="/assets/starFill.svg"
+                    src={StarFill}
                     alt="채워진별"
                     width={29}
                     height={27}
@@ -18,7 +20,7 @@ function ReviewItems({ currentIndex, reviews }) {
                 {Array.from({ length: 5 - review.star }, (_, index) => (
                   <img
                     key={index}
-                    src="/assets/starNonFill.svg"
+                    src={StarNonFill}
                     alt="안채워진별"
                     width={29}
                     height={27}

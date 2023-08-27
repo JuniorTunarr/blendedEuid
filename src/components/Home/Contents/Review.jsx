@@ -3,7 +3,7 @@ import SubTitleWrapper from "@/components/Common/SubTitleWrapper";
 import ReviewItems from "./ReviewItems";
 import { useEffect } from "react";
 import Spinner from "@/components/Common/Spinner";
-
+import CarouselControl from "/assets/carouselControl.svg";
 function Review() {
   const [reviews, setReviews] = useState(null);
   const [status, setStatus] = useState("pending");
@@ -74,8 +74,7 @@ function Review() {
             aria-label="이전 보기"
             onClick={handlePreviousClick}
             style={{
-              background:
-                "url(/assets/carouselControl.svg) center/cover no-repeat",
+              background: `url(${CarouselControl}) center/cover no-repeat`,
             }}
           />
         )}
@@ -86,8 +85,7 @@ function Review() {
             aria-label="다음 보기"
             onClick={handleNextClick}
             style={{
-              background:
-                "url(/assets/carouselControl.svg) center/cover no-repeat",
+              background: `url(${CarouselControl}) center/cover no-repeat`,
             }}
           />
         )}

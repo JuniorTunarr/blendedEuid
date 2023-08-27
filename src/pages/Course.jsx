@@ -1,5 +1,5 @@
 function Course() {
-  return <div>Course</div>;
+  return <div className=" flex items-center justify-center">Course</div>;
 }
 
 export default Course;

@@ -1,5 +1,5 @@
 function PrivacyPolicy() {
-  return <div>PrivacyPolicy</div>;
+  return <div className=" flex items-center justify-center">PrivacyPolicy</div>;
 }
 
 export default PrivacyPolicy;
