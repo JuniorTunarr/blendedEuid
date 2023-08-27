@@ -2,7 +2,7 @@ import Homelogo from "/assets/homeLogo.svg";
 function HeaderHeading() {
   return (
     <h1 className="header__title">
-      <a href="/" className="block p-2.5">
+      <a href="/blendedEuid" className="block p-2.5">
         <img
           src={Homelogo}
           alt="이듬(E.UID) 블렌디드 러닝"

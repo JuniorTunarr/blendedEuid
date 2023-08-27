@@ -62,11 +62,15 @@ function UserSection() {
         ) : (
           <>
             <li className="p-1">
-              <a href="/blendedEuid/signin">로그인</a>
+              <a href="/blendedEuid/signin" className="block">
+                로그인
+              </a>
             </li>
             <div className="w-full h-px bg-[rgb(221,221,221)] mx-0 my-2"></div>
-            <li className="p-1">
-              <a href="/blendedEuid/signup">회원가입</a>
+            <li className="p-1 ">
+              <a href="/blendedEuid/signup" className="block relative z-50">
+                회원가입
+              </a>
             </li>
           </>
         )}

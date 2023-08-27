@@ -31,7 +31,7 @@ const router = createBrowserRouter(
       <Route path="privacypolicy" element={<PrivacyPolicy />} />
       <Route path="schedule" element={<Schedule />} />
       <Route path="shop" element={<Shop />} />
-      <Route path="Story" element={<Story />} />
+      <Route path="story" element={<Story />} />
     </Route>
   ),
   { basename: "/blendedEuid" }

@@ -6,7 +6,7 @@ function TitleWrapper() {
     >
       <h1
         id="motto"
-        className="box-border select-none relative font-normal leading-[1.1] tracking-[-0.01em] text-[#373e6a] transition-all duration-[0.4s] ease-[cubic-bezier(1,0,0,1)] text-[6.25rem] mt-5 mb-0 mx-0"
+        className="box-border  relative font-normal leading-[1.1] tracking-[-0.01em] text-[#373e6a]  text-[6.25rem] mt-5 mb-0 mx-0"
       >
         <span className="select-none font-normal leading-[1.1] tracking-[-0.01em] text-[#373e6a] text-[6.25rem] box-border inline-block mr-4">
           User Interface
