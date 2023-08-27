@@ -73,12 +73,13 @@ function Profile() {
 
       // 업데이트된 사용자 정보 다시 불러오기
       const refreshedUser = await pb.collection("users").getOne(user.id);
-
       setUpdatedUser({
         ...refreshedUser,
         avatar: refreshedUser?.avatar || DefaultUser,
         avatarFile: null,
       });
+      alert("저장 완료!");
+      setIsEditMode(false);
     } catch (error) {
       console.error(error);
     }
