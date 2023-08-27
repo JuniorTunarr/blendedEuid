@@ -1,22 +1,27 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import UnLoginUser from "/assets/unloginUser.svg";
 import DefaultUser from "/assets/defaultUser.svg";
 import { useAuth } from "@/contexts/Auth";
 import { useNavigate } from "react-router-dom";
 import { Link } from "react-router-dom";
+import pb from "@/api/pocketbase";
 
 function UserSection() {
   const [isListVisible, setIsListVisible] = useState(false);
   const { isAuth, user, signOut } = useAuth();
   const navigate = useNavigate();
 
-  let userProfileImage;
+  const [profileImageUrl, setProfileImageUrl] = useState(DefaultUser);
 
-  if (isAuth) {
-    userProfileImage = user.avatar || DefaultUser;
-  } else {
-    userProfileImage = UnLoginUser;
-  }
+  useEffect(() => {
+    if (isAuth && user?.avatar) {
+      setProfileImageUrl(pb.files.getUrl(user, user.avatar));
+    } else if (isAuth) {
+      setProfileImageUrl(DefaultUser);
+    } else {
+      setProfileImageUrl(UnLoginUser);
+    }
+  }, [isAuth, user]);
 
   const handleSignOut = async () => {
     await signOut();
@@ -36,7 +41,7 @@ function UserSection() {
           />
         </svg>
         <img
-          src={userProfileImage}
+          src={profileImageUrl}
           className="ml-2 w-[30px] h-[30px] border rounded-full object-cover"
           alt="사용자 프로필"
           onError={(e) => {

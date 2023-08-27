@@ -7,9 +7,6 @@ function Profile() {
   const { user, signOut, cancelMembership, updateUser } = useAuth();
   const navigate = useNavigate();
 
-  // 조건부 유저 이미지
-  const userProfileImage = user?.avatar || DefaultUser;
-
   // 로그아웃 핸들러
   const handleSignOut = async () => {
     await signOut();
@@ -26,12 +23,12 @@ function Profile() {
 
   // 프로필 수정 모드 상태
   const [isEditMode, setIsEditMode] = useState(false);
-  console.log(user);
+
   // 변경할 사용자 정보 상태
   const [updatedUser, setUpdatedUser] = useState({
     username: user?.username,
     email: user?.email,
-    avatar: user?.avatar,
+    avatar: DefaultUser,
     avatarFile: null,
   });
 
@@ -42,7 +39,7 @@ function Profile() {
       avatar: user?.avatar || DefaultUser,
     });
   }, [user]);
-
+  console.log(user);
   // 프로필(이미지X) 변경 핸들러
   const handleProfileChange = (e) => {
     setUpdatedUser({ ...updatedUser, [e.target.name]: e.target.value });
@@ -73,11 +70,14 @@ function Profile() {
 
       // 업데이트된 사용자 정보 다시 불러오기
       const refreshedUser = await pb.collection("users").getOne(user.id);
+      const avatarUrl = pb.files.getUrl(refreshedUser, refreshedUser.avatar);
+
       setUpdatedUser({
         ...refreshedUser,
-        avatar: refreshedUser?.avatar || DefaultUser,
+        avatar: avatarUrl || DefaultUser,
         avatarFile: null,
       });
+
       alert("저장 완료!");
       setIsEditMode(false);
     } catch (error) {
@@ -145,7 +145,7 @@ function Profile() {
           <>
             <div className="flex justify-between gap-5">
               <img
-                src={userProfileImage}
+                src={updatedUser.avatar}
                 alt="사용자 프로필"
                 className="w-24 h-24 rounded-full mb-4"
                 onError={(e) => {
